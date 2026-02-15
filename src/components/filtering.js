@@ -24,7 +24,7 @@ export function initFiltering(elements, indexes) {
     return (data, state, action) => {
         // @todo: #4.2 — обработать очистку поля
 
-        if (action && action.name === "clean") {
+        if (action && action.name === "clear") {
             const wrapper  = action.closest (".filter-wrapper");
             if (wrapper) {
                 const input = wrapper.querySelector ("input");
