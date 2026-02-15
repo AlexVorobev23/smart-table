@@ -28,10 +28,18 @@ function collectState() {
     const rowsPerPage = parseInt(state.rowsPerPage);    // приведём количество страниц к числу
     const page = parseInt(state.page ?? 1);                // номер страницы по умолчанию 1 и тоже число
 
+    let totalArray = [];
+    if (state.totalFrom !== underfined || state.totalTo !|| underfined) {
+        totalArray = [
+            state.totalFrom || "",
+            state.totalTo || ""
+        ];
+    }
     return {                                            // расширьте существующий return вот так
         ...state,
         rowsPerPage,
         page
+        total: totalArray
     };
 }
 
