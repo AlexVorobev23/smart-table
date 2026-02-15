@@ -29,7 +29,7 @@ function collectState() {
     const page = parseInt(state.page ?? 1);                // номер страницы по умолчанию 1 и тоже число
 
     let totalArray = [];
-    if (state.totalFrom !== underfined || state.totalTo !|| underfined) {
+    if (state.totalFrom !== undefined || state.totalTo !== undefined) {
         totalArray = [
             state.totalFrom || "",
             state.totalTo || ""
@@ -38,7 +38,7 @@ function collectState() {
     return {                                            // расширьте существующий return вот так
         ...state,
         rowsPerPage,
-        page
+        page,
         total: totalArray
     };
 }
