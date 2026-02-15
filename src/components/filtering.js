@@ -25,15 +25,11 @@ export function initFiltering(elements, indexes) {
         // @todo: #4.2 — обработать очистку поля
 
         if (action && action.name === "clear") {
-            const wrapper  = action.closest (".filter-wrapper");
+            const wrapper  = action.closest(".filter-wrapper");
             if (wrapper) {
-                const input = wrapper.querySelector ("input");
+                const input = wrapper.querySelector("input");
                 if (input) {
                     input.value = "";
-                    const fieldName = action.dataset.field;
-                    if (fieldName) {
-                        
-                    }
                 }
             }
         }
