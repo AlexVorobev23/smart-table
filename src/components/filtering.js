@@ -31,7 +31,9 @@ export function initFiltering(elements, indexes) {
                 if (input) {
                     input.value = "";
                     const fieldName = action.dataset.field;
-                    if (fieldName);
+                    if (fieldName) {
+                        
+                    }
                 }
             }
         }
