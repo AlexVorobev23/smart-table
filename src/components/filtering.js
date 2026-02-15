@@ -24,6 +24,17 @@ export function initFiltering(elements, indexes) {
     return (data, state, action) => {
         // @todo: #4.2 — обработать очистку поля
 
+        if (action && action.name === "clean") {
+            const wrapper  = action.closest (".filter-wrapper");
+            if (wrapper) {
+                const input = wrapper.querySelector ("input");
+                if (input) {
+                    input.value = "";
+                    const fieldName = action.dataset.field;
+                    if (fieldName);
+                }
+            }
+        }
         // @todo: #4.5 — отфильтровать данные используя компаратор
         return data.filter(row => compare(row, state));
     }
