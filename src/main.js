@@ -49,7 +49,7 @@ function collectState() {
  * @param {HTMLButtonElement?} action
  */
 async function render(action) {
-    let state = collectState(); // состояние полей из таблицы
+    const state = collectState(); // состояние полей из таблицы
     //let result = [...data]; // копируем для последующего изменения
     let query = {};
 
